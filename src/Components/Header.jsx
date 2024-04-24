@@ -5,8 +5,9 @@ import { FaMoon } from "react-icons/fa";
 import { FiSun } from "react-icons/fi";
 import photo from "../../public/images/profile.jpg";
 import { useState } from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
 
-const Header = () => {
+const Header = ({ showFull, setShowFull }) => {
   const [showDark, setShowDark] = useState(false);
 
   return (
@@ -15,8 +16,12 @@ const Header = () => {
       <div className="flex justify-between w-[45%]">
         {/* sc-1-sub-1 */}
         <div className="flex justify-between items-center w-[140px]">
-          <button className="">
-            <RiMenu2Fill className="text-2xl font-bold hover:text-3xl duration-150"></RiMenu2Fill>
+          <button onClick={() => setShowFull(!showFull)} className="">
+            {showFull ? (
+              <RiMenu2Fill className="text-2xl font-bold transition-transform duration-300 ease-in-out transform hover:scale-x-125"></RiMenu2Fill>
+            ) : (
+              <FaArrowRightLong className="text-2xl text-red-600 font-bold transition-transform duration-300 ease-in-out transform hover:scale-x-125"></FaArrowRightLong>
+            )}
           </button>
           <h3 className="text-2xl font-semibold">Invoice</h3>
         </div>
