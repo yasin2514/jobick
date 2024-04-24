@@ -6,14 +6,12 @@ import Profile from "./Profile";
 import NavbarBrand from "./NavbarBrand";
 
 const Navbar = ({ showFull }) => {
-  const [showDropdown, setShowDropdown] = useState(false);
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
   const dropdownRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setShowDropdown(false);
         setShowProfileDropdown(false);
       }
     };
@@ -31,11 +29,16 @@ const Navbar = ({ showFull }) => {
   return (
     <>
       {/* profile info section */}
-      <div ref={dropdownRef} className="dropdown dropdown-bottom  w-full px-5">
+      <div
+        ref={dropdownRef}
+        className={`dropdown dropdown-bottom  w-full ${
+          showFull ? "px-5" : "h-12"
+        }`}
+      >
         <div
           tabIndex={0}
           role="button"
-          className="flex items-center justify-between  w-full"
+          className="flex items-center justify-between h-full  w-full "
           onClick={toggleDropdownProfile}
         >
           {showFull ? (
@@ -48,14 +51,13 @@ const Navbar = ({ showFull }) => {
               <IoIosArrowDown></IoIosArrowDown>
             </>
           ) : (
-            <img src={photo} alt="" className="w-12 rounded-lg" />
+            <img src={photo} alt="" className="w-full h-full rounded-lg" />
           )}
         </div>
         {showProfileDropdown && <Profile></Profile>}
       </div>
       {/* nav link section */}
-      <NavbarBrand
-      ></NavbarBrand>
+      {showFull && <NavbarBrand></NavbarBrand>}
     </>
   );
 };
