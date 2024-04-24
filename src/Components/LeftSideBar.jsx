@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 const LeftSideBar = ({ showFull }) => {
   return (
-    <div className={`bg-white ${showFull ? "px-5" : "px-4"}`}>
+    <div className={`bg-white ${showFull ? "px-0" : "px-4"}`}>
       {/* logo section */}
       <div className=" flex items-center justify-center py-4">
         {showFull ? (

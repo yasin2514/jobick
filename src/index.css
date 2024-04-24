@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-ul:hover .fa-minus {
+  @apply transition-transform transform scale-x-150 duration-300
+}
+.custom-ul:hover .custom-span {
+  @apply transition-transform transform translate-x-4 duration-300
+}
+.custom-div:hover .custom-text {
+  @apply text-red-600
+}

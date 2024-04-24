@@ -28,13 +28,10 @@ const Navbar = ({ showFull }) => {
   const toggleDropdownProfile = () => {
     setShowProfileDropdown(!showProfileDropdown);
   };
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
-  };
   return (
     <>
       {/* profile info section */}
-      <div ref={dropdownRef} className="dropdown dropdown-bottom  w-full">
+      <div ref={dropdownRef} className="dropdown dropdown-bottom  w-full px-5">
         <div
           tabIndex={0}
           role="button"
@@ -58,9 +55,6 @@ const Navbar = ({ showFull }) => {
       </div>
       {/* nav link section */}
       <NavbarBrand
-        toggleDropdown={toggleDropdown}
-        dropdownRef={dropdownRef}
-        showDropdown={showDropdown}
       ></NavbarBrand>
     </>
   );
