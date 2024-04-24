@@ -9,7 +9,7 @@ const NavbarBrand = () => {
   const [showDropdown3, setDropDown3] = useState(false);
   const [showDropdown4, setDropDown4] = useState(false);
   return (
-    <div className="my-5">
+    <div className="mt-5">
       {/* navbar-1 ----------------------------*/}
       <div className="dropdown dropdown-bottom w-full">
         {showDropdown1 ? (
@@ -164,7 +164,7 @@ const NavbarBrand = () => {
         <ul className="mb-6">
           <li className="custom-ul custom-ul-1">
             <NavLink
-              to="/email"
+              to="/email-read"
               className={({ isActive }) =>
                 isActive
                   ? "flex items-center px-9 justify-start   text-[14px] gap-3 font-semibold text-red-600"
@@ -192,7 +192,7 @@ const NavbarBrand = () => {
               >
                 <div
                   className={
-                    "flex items-center justify-between gap-5  text-[15px] font-semibold text-red-600 px-5 "
+                    "flex items-center justify-between gap-  text-[15px] font-semibold text-red-600 px-5 "
                   }
                 >
                   <FaMinus className=" fa-minus custom-text1"></FaMinus>{" "}
@@ -222,13 +222,13 @@ const NavbarBrand = () => {
           </>
         )}
       </div>
-      {/* dropdown-4 */}
 
+      {/* dropdown-4 */}
       {showDropdown4 && (
         <ul className="mt-3">
           <li className="custom-ul custom-ul-2">
             <NavLink
-              to="/shop"
+              to="/shop-invoice"
               className={({ isActive }) =>
                 isActive
                   ? "flex items-center px-9 justify-start   text-[14px] gap-3 font-semibold text-red-600"

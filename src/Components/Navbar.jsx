@@ -108,7 +108,7 @@ const Navbar = ({ showFull }) => {
               <ul className="  mt-1  ">
                 <li className="custom-ul custom-div-2">
                   <NavLink
-                    to="/read"
+                    to="/email-read"
                     className={({ isActive }) =>
                       isActive
                         ? "flex items-center justify-start  px-2 text-[14px] gap-3 font-semibold text-red-600"
@@ -121,7 +121,7 @@ const Navbar = ({ showFull }) => {
                 </li>
                 <li className="custom-ul custom-div-2">
                   <NavLink
-                    to="/shop"
+                    to="/shop-invoice"
                     className={({ isActive }) =>
                       isActive
                         ? "flex items-center justify-start  px-2 text-[14px] gap-3 font-semibold text-red-600"

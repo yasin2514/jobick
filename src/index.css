@@ -3,29 +3,33 @@
 @tailwind utilities;
 
 .custom-ul:hover .fa-minus {
-  @apply transition-transform transform scale-x-150 duration-300
+  @apply transition-transform transform scale-x-150 duration-300;
 }
 .custom-ul:hover .custom-span {
-  @apply transition-transform transform translate-x-4 duration-300
+  @apply transition-transform transform translate-x-4 duration-300;
 }
 .custom-ul:hover .custom-span1 {
-  @apply transition-transform transform translate-x-3 duration-300
+  @apply transition-transform transform translate-x-3 duration-300;
 }
 .custom-div:hover .custom-text {
-  @apply text-red-600 
+  @apply text-red-600;
 }
 
-.custom-ul-1:hover .custom-text1{
-  @apply text-red-600 
+.custom-ul-1:hover .custom-text1 {
+  @apply text-red-600;
+}
+.custom-ul-2:hover .custom-text2 {
+  @apply text-red-600;
+}
+.custom-div-1:hover .custom-text3 {
+  @apply text-red-600;
+}
+.custom-div-2:hover .custom-text4 {
+  @apply text-red-600;
+}
 
-}
-.custom-ul-2:hover .custom-text2{
-  @apply text-red-600 
-}
-.custom-div-1:hover .custom-text3{
-  @apply text-red-600 
-
-}
-.custom-div-2:hover .custom-text4{
-  @apply text-red-600 
+.bg-image {
+  background-image: url("../public/images/dots1.png");
+  background-position:top left;
+  background-repeat: no-repeat;
 }

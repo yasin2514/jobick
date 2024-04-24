@@ -17,7 +17,14 @@ const LeftSideBar = ({ showFull }) => {
       {/* navbar section */}
       <Navbar showFull={showFull}></Navbar>
       {/* bottom section */}
-      {showFull && <div>bottom part</div>}
+      {showFull && (
+        <div className="bg-[#145650] rounded-lg p-5 text-white mx-5 space-y-1 bg-image">
+          <p className="font-semibold text-[17px]">
+            Let Jobick Managed Your Resume Easily
+          </p>
+          <p className="text-gray-300">Lorem ipsum dolor sit amet</p>
+        </div>
+      )}
     </div>
   );
 };
