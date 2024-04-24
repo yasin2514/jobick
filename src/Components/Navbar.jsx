@@ -79,7 +79,7 @@ const Navbar = ({ showFull }) => {
               <ul className=" custom-ul mt-1  custom-div-2">
                 <li>
                   <NavLink
-                    to="/d"
+                    to="/"
                     className={({ isActive }) =>
                       isActive
                         ? "flex items-center justify-start  px-2 text-[14px] gap-3 font-semibold text-red-600"
