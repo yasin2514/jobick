@@ -4,6 +4,7 @@ import {} from "react-icons/io";
 import { useEffect, useRef, useState } from "react";
 import Profile from "./Profile";
 import NavbarBrand from "./NavbarBrand";
+import { FaFlag, FaInfoCircle } from "react-icons/fa";
 
 const Navbar = ({ showFull }) => {
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
@@ -58,6 +59,19 @@ const Navbar = ({ showFull }) => {
       </div>
       {/* nav link section */}
       {showFull && <NavbarBrand></NavbarBrand>}
+      {!showFull && (
+        <div className="space-y-4 mt-5">
+          <button className="bg-gray-300 p-1 flex flex-col items-center gap-3 w-full py-3 rounded-md hover:bg-gray-400">
+            <FaFlag className="text-red-600"></FaFlag>
+            <small className=" custom-span1 bg-red-600 text-white px-2 rounded-md">
+              New
+            </small>{" "}
+          </button>
+          <button className="bg-gray-300 p-1 flex flex-col items-center gap-3 w-full py-4 rounded-md hover:bg-gray-400">
+            <FaInfoCircle className="text-red-600"></FaInfoCircle>
+          </button>
+        </div>
+      )}
     </>
   );
 };
