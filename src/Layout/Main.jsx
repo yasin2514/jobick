@@ -5,7 +5,7 @@ import Header from "../Components/Header";
 const Main = () => {
   return (
     <div className="flex  h-screen">
-      <div className="w-[300px]">
+      <div className="w-[290px]">
         <LeftSideBar></LeftSideBar>
       </div>
       <div className=" flex flex-col h-screen  w-full">
