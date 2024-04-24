@@ -21,5 +21,11 @@
 }
 .custom-ul-2:hover .custom-text2{
   @apply text-red-600 
+}
+.custom-div-1:hover .custom-text3{
+  @apply text-red-600 
 
+}
+.custom-div-2:hover .custom-text4{
+  @apply text-red-600 
 }

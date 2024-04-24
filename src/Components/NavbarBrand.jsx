@@ -121,7 +121,7 @@ const NavbarBrand = () => {
               >
                 <div
                   className={
-                    "flex items-center justify-between gap-5  text-[15px] font-semibold text-red-600 py-3 px-5 "
+                    "flex items-center justify-between gap-5  text-[16px] font-semibold text-red-600 py-5 px-5 "
                   }
                 >
                   <FaMinus className=" fa-minus custom-text1"></FaMinus>{" "}
@@ -134,6 +134,7 @@ const NavbarBrand = () => {
               </div>
             ) : (
               <div
+                className="custom-div-1"
                 onClick={() => {
                   showDropdown4 && setDropDown4(false);
                   setDropDown3(true);
@@ -141,11 +142,11 @@ const NavbarBrand = () => {
               >
                 <div
                   className={
-                    "flex items-center justify-between gap-5  text-[15px] font-semibold text-gray-600 py-3 px-5 "
+                    "flex items-center justify-between gap-5  text-[16px] font-semibold text-gray-600 py-5 px-5 "
                   }
                 >
                   <FaMinus className=" fa-minus custom-text1"></FaMinus>{" "}
-                  <span className="custom-text1 custom-span1">Email</span>
+                  <span className=" custom-text3">Email</span>
                   <small className=" custom-span1 bg-red-600 text-white px-2 rounded-md">
                     New
                   </small>{" "}
@@ -159,7 +160,7 @@ const NavbarBrand = () => {
 
       {/* dropdown-3 */}
       {showDropdown3 && (
-        <ul className="mb-2">
+        <ul className="mb-6">
           <li className="custom-ul custom-ul-1">
             <NavLink
               to="/email"
@@ -190,16 +191,17 @@ const NavbarBrand = () => {
               >
                 <div
                   className={
-                    "flex items-center justify-between gap-5  text-[14px] font-semibold text-red-600 px-5 "
+                    "flex items-center justify-between gap-5  text-[15px] font-semibold text-red-600 px-5 "
                   }
                 >
                   <FaMinus className=" fa-minus custom-text1"></FaMinus>{" "}
-                  <span className="custom-text1 custom-span1">Shop</span>
+                  <span className="w-[108px]">Shop</span>
                   <TiArrowSortedDown className=" text-red-600 custom-span1"></TiArrowSortedDown>
                 </div>
               </div>
             ) : (
               <div
+                className="custom-div-2"
                 onClick={() => {
                   showDropdown3 && setDropDown3(false);
                   setDropDown4(true);
@@ -207,11 +209,11 @@ const NavbarBrand = () => {
               >
                 <div
                   className={
-                    "flex items-center justify-between gap-5  text-[14px] font-semibold text-gray-600 px-5 "
+                    "flex items-center justify-between gap-5  text-[15px] font-semibold text-gray-600 px-5 "
                   }
                 >
                   <FaMinus className=" fa-minus custom-text1"></FaMinus>{" "}
-                  <span className="custom-text1 custom-span1">Shop</span>
+                  <span className="custom-text4  w-[108px]">Shop</span>
                   <FaCaretRight className="text-gray-500 custom-span1"></FaCaretRight>
                 </div>
               </div>
@@ -222,7 +224,7 @@ const NavbarBrand = () => {
       {/* dropdown-4 */}
 
       {showDropdown4 && (
-        <ul>
+        <ul className="mt-3">
           <li className="custom-ul custom-ul-2">
             <NavLink
               to="/shop"
