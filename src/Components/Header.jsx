@@ -6,21 +6,22 @@ import { FiSun } from "react-icons/fi";
 import photo from "../../public/images/profile.jpg";
 import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import Profile from "./Profile";
 
 const Header = ({ showFull, setShowFull }) => {
   const [showDark, setShowDark] = useState(false);
 
   return (
-    <div className="py-5 px-10 flex items-center justify-between ">
+    <div className="py-4 px-10 flex items-center justify-between ">
       {/* section-1 */}
       <div className="flex justify-between w-[45%]">
         {/* sc-1-sub-1 */}
         <div className="flex justify-between items-center w-[140px]">
           <button onClick={() => setShowFull(!showFull)} className="">
             {showFull ? (
-              <RiMenu2Fill className="text-2xl font-bold transition-transform duration-300 ease-in-out transform hover:scale-x-125"></RiMenu2Fill>
+              <RiMenu2Fill className="text-2xl transition-transform duration-300 ease-in-out transform hover:scale-x-125"></RiMenu2Fill>
             ) : (
-              <FaArrowRightLong className="text-2xl text-red-600 font-bold transition-transform duration-300 ease-in-out transform hover:scale-x-125"></FaArrowRightLong>
+              <FaArrowRightLong className="text-2xl text-red-600  transition-transform duration-300 ease-in-out transform hover:scale-x-125"></FaArrowRightLong>
             )}
           </button>
           <h3 className="text-2xl font-semibold">Invoice</h3>
@@ -63,9 +64,16 @@ const Header = ({ showFull, setShowFull }) => {
           </button>
         </div>
         {/* s-2sub-3 */}
-        <button>
-          <img src={photo} alt="" className="w-12 rounded-lg" />
-        </button>
+        <div className="dropdown dropdown-left ">
+          <div
+            tabIndex={0}
+            role="button"
+            className="flex items-center justify-between  "
+          >
+            <img src={photo} alt="" className="w-12 rounded-lg" />
+          </div>
+          <Profile></Profile>
+        </div>
       </div>
     </div>
   );
