@@ -85,7 +85,8 @@ const NavbarBrand = () => {
                 "flex items-center justify-between gap-5  text-[17px] font-semibold text-red-600 py-3 px-5 bg-pink-100"
               }
             >
-              <FaInfoCircle></FaInfoCircle>Apps{" "}
+              <FaInfoCircle></FaInfoCircle>
+              <span className="w-[105px]">Apps</span>{" "}
               <TiArrowSortedDown></TiArrowSortedDown>
             </div>
           </div>
@@ -100,7 +101,7 @@ const NavbarBrand = () => {
               className={`flex items-center  justify-between gap-5 text-[16px]  py-3 px-5 font-semibold  custom-div `}
             >
               <FaInfoCircle className="text-gray-500"></FaInfoCircle>
-              <span className="custom-text">Apps</span>{" "}
+              <span className="custom-text w-[105px]">Apps</span>{" "}
               <FaCaretRight className="text-gray-500"></FaCaretRight>
             </div>
           </div>
