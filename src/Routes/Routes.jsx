@@ -1,8 +1,9 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Jobs from "../Pages/Jobs/Jobs";
 import Invoice from "../Pages/Shop/Invoice";
 import Read from "../Pages/Email/Read";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,6 @@ export const router = createBrowserRouter([
         element: <Invoice></Invoice>,
       },
     ],
-    errorElement: <div>Error Page</div>,
+    errorElement: <ErrorPage></ErrorPage>,
   },
 ]);

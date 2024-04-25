@@ -7,6 +7,7 @@ import photo from "../../public/images/profile.jpg";
 import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Profile from "./Profile";
+import Notifiction from "./Notifiction";
 
 const Header = ({ showFull, setShowFull }) => {
   const [showDark, setShowDark] = useState(false);
@@ -55,13 +56,23 @@ const Header = ({ showFull, setShowFull }) => {
         </div>
 
         {/* s-2sub-2 */}
-        <div className="indicator">
-          <span className="indicator-item flex justify-center items-center  bg-red-600 text-white rounded-full w-6 h-6">
-            4
-          </span>
-          <button>
-            <IoNotificationsOutline className="text-3xl "></IoNotificationsOutline>
-          </button>
+
+        <div className="dropdown dropdown-left ">
+          <div
+            tabIndex={0}
+            role="button"
+            className="flex items-center justify-between  "
+          >
+            <div className="indicator">
+              <span className="indicator-item flex justify-center items-center  bg-red-600 text-white rounded-full w-6 h-6">
+                4
+              </span>
+              <button>
+                <IoNotificationsOutline className="text-3xl "></IoNotificationsOutline>
+              </button>
+            </div>
+          </div>
+          <Notifiction></Notifiction>
         </div>
         {/* s-2sub-3 */}
         <div className="dropdown dropdown-left ">
