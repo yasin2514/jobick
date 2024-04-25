@@ -16,7 +16,7 @@ const Main = () => {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen overflow-hidden">
       <div className={`${showFull ? "w-[290px]" : "w-[90px]"} duration-300`}>
         <LeftSideBar showFull={showFull}></LeftSideBar>
       </div>
@@ -26,8 +26,19 @@ const Main = () => {
           setShowFull={setShowFull}
           toggleDarkMode={toggleDarkMode}
         ></Header>
-        <div className={`p-3 flex-1 ${darkMode ? "bg-black" : "bg-gray-200"}`}>
+        <div
+          className={`flex flex-col p-3 flex-1 overflow-y-scroll ${
+            darkMode ? "bg-black" : "bg-gray-200"
+          }`}
+        >
           <Outlet darkMode={darkMode}></Outlet>
+          <footer className="text-center mt-auto">
+            <small>
+              Copyright &copy; Developed by{" "}
+              <span className="text-red-600 text-[15px]">Yasin Khan</span>{" "}
+              {new Date().getFullYear()}
+            </small>
+          </footer>
         </div>
       </div>
     </div>
