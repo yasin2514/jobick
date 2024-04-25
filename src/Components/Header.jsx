@@ -1,10 +1,10 @@
+import React, { useState } from "react";
 import { IoMdAdd, IoMdSearch } from "react-icons/io";
 import { RiMenu2Fill } from "react-icons/ri";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { FaMoon } from "react-icons/fa";
 import { FiSun } from "react-icons/fi";
 import photo from "../../public/images/profile.jpg";
-import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Profile from "./Profile";
 import Notifiction from "./Notifiction";
@@ -12,10 +12,15 @@ import Modal from "./Modal";
 import { useLocation } from "react-router-dom";
 
 const Header = ({ showFull, setShowFull }) => {
-  const [showDark, setShowDark] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
   const location = useLocation();
 
-  // for dynamically change the text 
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    const theme = darkMode ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", theme);
+  };
+
   const renderContent = () => {
     if (location.pathname === "/") {
       return <h3 className="text-2xl font-semibold">Jobs</h3>;
@@ -29,10 +34,12 @@ const Header = ({ showFull, setShowFull }) => {
   };
 
   return (
-    <div className="py-4 px-10 flex items-center justify-between ">
-      {/* section-1 */}
+    <div
+      className={`py-4 px-10 flex items-center justify-between ${
+        darkMode ? "dark-mode" : ""
+      }`}
+    >
       <div className="flex justify-between w-[45%]">
-        {/* sc-1-sub-1 */}
         <div className="flex justify-between items-center w-[140px]">
           <button onClick={() => setShowFull(!showFull)} className="">
             {showFull ? (
@@ -43,7 +50,6 @@ const Header = ({ showFull, setShowFull }) => {
           </button>
           <div>{renderContent()}</div>
         </div>
-        {/* sc-1-sub-2 */}
         <div className=" justify-between flex w-[320px]">
           <label className="input input-bordered flex items-center gap-2 h-10">
             <input type="text" className="grow" placeholder="Search" />
@@ -55,29 +61,22 @@ const Header = ({ showFull, setShowFull }) => {
           >
             <IoMdAdd className="text-2xl text-white"></IoMdAdd>
           </button>
-          {/* for modal */}
           <Modal modalId={"my_modal_1"}></Modal>
         </div>
       </div>
-
-      {/* section-2 */}
       <div className=" w-[180px] flex justify-between items-center">
-        {/* s-2sub-1 */}
         <div>
           <button
-            onClick={() => setShowDark(!showDark)}
+            onClick={toggleDarkMode}
             className="transition-transform duration-300 ease-in-out transform hover:scale-110"
           >
-            {showDark ? (
+            {darkMode ? (
               <FiSun className="text-2xl" />
             ) : (
               <FaMoon className="text-2xl" />
             )}
           </button>
         </div>
-
-        {/* s-2sub-2 */}
-
         <div className="dropdown dropdown-left ">
           <div
             tabIndex={0}
@@ -95,7 +94,6 @@ const Header = ({ showFull, setShowFull }) => {
           </div>
           <Notifiction></Notifiction>
         </div>
-        {/* s-2sub-3 */}
         <div className="dropdown dropdown-left ">
           <div
             tabIndex={0}
