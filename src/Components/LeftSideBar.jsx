@@ -29,7 +29,7 @@ const LeftSideBar = ({ showFull }) => {
           {/* another section */}
 
           <div className="mt-auto px-5 text-center mb-5">
-            <h5 className="text-black font-semibold">Jobick Job Admin</h5>
+            <h5 className=" font-semibold">Jobick Job Admin</h5>
             <small className="text-gray-500">
               &copy; {new Date().getFullYear()} All Rights Reserved
             </small>

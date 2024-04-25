@@ -11,16 +11,8 @@ import Notifiction from "./Notifiction";
 import Modal from "./Modal";
 import { useLocation } from "react-router-dom";
 
-const Header = ({ showFull, setShowFull }) => {
-  const [darkMode, setDarkMode] = useState(false);
+const Header = ({ showFull, setShowFull, darkMode, toggleDarkMode }) => {
   const location = useLocation();
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    const theme = darkMode ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", theme);
-  };
-
   const renderContent = () => {
     if (location.pathname === "/") {
       return <h3 className="text-2xl font-semibold">Jobs</h3>;

@@ -1,4 +1,3 @@
-import React from "react";
 import BreadCumb from "../../Components/BreadCumb";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
