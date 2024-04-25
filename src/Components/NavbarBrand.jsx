@@ -78,6 +78,8 @@ const NavbarBrand = () => {
             onClick={() => {
               setDropDown2(false);
               showDropdown1 && setDropDown1(false);
+              showDropdown3 && setDropDown3(false);
+              showDropdown4 && setDropDown4(false);
             }}
           >
             <div
@@ -189,10 +191,11 @@ const NavbarBrand = () => {
                   showDropdown3 && setDropDown3(false);
                   setDropDown4(false);
                 }}
+                className=""
               >
                 <div
                   className={
-                    "flex items-center justify-between gap-  text-[15px] font-semibold text-red-600 px-5 "
+                    "flex items-center justify-between gap-  text-[15px] font-semibold text-red-600 px-5"
                   }
                 >
                   <FaMinus className=" fa-minus custom-text1"></FaMinus>{" "}
@@ -202,7 +205,7 @@ const NavbarBrand = () => {
               </div>
             ) : (
               <div
-                className="custom-div-2"
+                className="custom-div-2 mb-5"
                 onClick={() => {
                   showDropdown3 && setDropDown3(false);
                   setDropDown4(true);
@@ -225,7 +228,7 @@ const NavbarBrand = () => {
 
       {/* dropdown-4 */}
       {showDropdown4 && (
-        <ul className="mt-3">
+        <ul className="my-3">
           <li className="custom-ul custom-ul-2">
             <NavLink
               to="/shop-invoice"
