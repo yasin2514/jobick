@@ -5,7 +5,7 @@ import logo from "../../../public/images/logo-full.png";
 const Invoice = () => {
   return (
     <div className="p-5 space-y-5">
-      <div className="">
+      <div>
         <BreadCumb text1={"Layout"} text2={"Bank"}></BreadCumb>
       </div>
 
@@ -44,7 +44,7 @@ const Invoice = () => {
           <div className="flex justify-between gap-16 items-start">
             <div>
               <img src={logo} alt="logo" />
-              <p>Please send exact amount :  0.15050000 BTC</p>
+              <p>Please send exact amount : 0.15050000 BTC</p>
               <p>1DonateWffyhwAjskoEwXt83pHZxhLTr8H</p>
               <p>Current exchange rate 1BTC = $6590 USD</p>
             </div>
@@ -53,8 +53,9 @@ const Invoice = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 p-5">
-          <table className="w-full">
+        {/* for table code  */}
+        <div className="mt-8 p-5 pb-10">
+          <table className="w-full table">
             <thead className="bg-gray-200">
               <tr>
                 <th className="py-2 text-left">#</th>
@@ -65,7 +66,7 @@ const Invoice = () => {
                 <th className="py-2 text-left">Total</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="">
               <tr>
                 <td className="py-2">1</td>
                 <td className="py-2">Origin License</td>
@@ -100,28 +101,49 @@ const Invoice = () => {
                 <td className="py-2">1</td>
                 <td className="py-2">$3.999,00</td>
               </tr>
+              <tr>
+                <td
+                  colSpan={5}
+                  className="text-[15px] font-semibold text-center"
+                >
+                  Subtotal
+                </td>
+                <td className="text-[15px] font-semibold">$8.497,00</td>
+              </tr>
+              <tr>
+                <td
+                  colSpan={5}
+                  className="text-[15px] font-semibold text-center"
+                >
+                  Discount (20%)
+                </td>
+                <td className="text-[15px] font-semibold">-$1,699.40</td>
+              </tr>
+              <tr>
+                <td
+                  colSpan={5}
+                  className="text-[15px] font-semibold text-center"
+                >
+                  VAT (10%)
+                </td>
+                <td className="text-[15px] font-semibold">$679.76</td>
+              </tr>
+              <tr >
+                <td
+                  colSpan={5}
+                  className="text-[15px] font-semibold text-center"
+                >
+                  Total
+                </td>
+                <td className="text-[15px] font-semibold">
+                  <span>0.15050000 BTC</span>
+                  <br />
+                  <span>$7,477.36</span>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <div className="flex justify-between mt-8">
-          <div>
-            <p className="text-xl font-semibold">Subtotal</p>
-            <p className="text-xl">$8.497,00</p>
-          </div>
-          <div>
-            <p className="text-xl font-semibold">Discount (20%)</p>
-            <p className="text-xl">-$1,699.40</p>
-          </div>
-          <div>
-            <p className="text-xl font-semibold">VAT (10%)</p>
-            <p className="text-xl">$679.76</p>
-          </div>
-          <div>
-            <p className="text-xl font-semibold">Total</p>
-            <p className="text-xl">$7,477.36</p>
-          </div>
-        </div>
-        <p className="mt-8">0.15050000 BTC</p>
       </div>
     </div>
   );
