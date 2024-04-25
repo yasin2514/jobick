@@ -55,7 +55,7 @@ const NavbarBrand = () => {
           </div>
         )}
         {showDropdown1 && (
-          <ul className=" custom-ul mt-1  ">
+          <ul className=" custom-ul mt-1  custom-div">
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -64,8 +64,8 @@ const NavbarBrand = () => {
                   : "flex items-center  justify-start ms-9  text-[14px] gap-3"
               }
             >
-              <FaMinus className=" fa-minus"></FaMinus>{" "}
-              <span className="custom-span">New Job</span>
+              <FaMinus className=" fa-minus custom-text"></FaMinus>{" "}
+              <span className="custom-span custom-text">New Job</span>
             </NavLink>
           </ul>
         )}

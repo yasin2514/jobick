@@ -60,6 +60,8 @@ const Navbar = ({ showFull }) => {
       </div>
       {/* nav link section */}
       {showFull && <NavbarBrand></NavbarBrand>}
+
+      {/* navbar section when button collapse */}
       {!showFull && (
         <div className="space-y-4 mt-5">
           {/* dropdown-1 */}
@@ -129,7 +131,7 @@ const Navbar = ({ showFull }) => {
                     }
                   >
                     <FaMinus className=" fa-minus custom-text4"></FaMinus>{" "}
-                    <span className="custom-span custom-text4">Shop</span>
+                    <span className="custom-span custom-text4">Invoice</span>
                   </NavLink>
                 </li>
               </ul>
