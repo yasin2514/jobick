@@ -8,6 +8,7 @@ import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Profile from "./Profile";
 import Notifiction from "./Notifiction";
+import Modal from "./Modal";
 
 const Header = ({ showFull, setShowFull }) => {
   const [showDark, setShowDark] = useState(false);
@@ -33,9 +34,14 @@ const Header = ({ showFull, setShowFull }) => {
             <input type="text" className="grow" placeholder="Search" />
             <IoMdSearch className="text-gray-400"></IoMdSearch>
           </label>
-          <button className="bg-green-800 hover:bg-green-700 text-white px-3 rounded-lg">
+          <button
+            onClick={() => document.getElementById("my_modal_1").showModal()}
+            className="bg-green-800 hover:bg-green-700 text-white px-3 rounded-lg"
+          >
             <IoMdAdd className="text-2xl text-white"></IoMdAdd>
           </button>
+          {/* for modal */}
+          <Modal modalId={"my_modal_1"}></Modal>
         </div>
       </div>
 
