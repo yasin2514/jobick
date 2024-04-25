@@ -9,9 +9,24 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import Profile from "./Profile";
 import Notifiction from "./Notifiction";
 import Modal from "./Modal";
+import { useLocation } from "react-router-dom";
 
 const Header = ({ showFull, setShowFull }) => {
   const [showDark, setShowDark] = useState(false);
+  const location = useLocation();
+
+  // for dynamically change the text 
+  const renderContent = () => {
+    if (location.pathname === "/") {
+      return <h3 className="text-2xl font-semibold">Jobs</h3>;
+    } else if (location.pathname === "/shop-invoice") {
+      return <h3 className="text-2xl font-semibold">Invoice</h3>;
+    } else if (location.pathname === "/email-read") {
+      return <h3 className="text-2xl font-semibold">Read</h3>;
+    } else {
+      return null;
+    }
+  };
 
   return (
     <div className="py-4 px-10 flex items-center justify-between ">
@@ -26,7 +41,7 @@ const Header = ({ showFull, setShowFull }) => {
               <FaArrowRightLong className="text-2xl text-red-600  transition-transform duration-300 ease-in-out transform hover:scale-x-125"></FaArrowRightLong>
             )}
           </button>
-          <h3 className="text-2xl font-semibold">Invoice</h3>
+          <div>{renderContent()}</div>
         </div>
         {/* sc-1-sub-2 */}
         <div className=" justify-between flex w-[320px]">

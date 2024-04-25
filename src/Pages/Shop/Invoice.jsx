@@ -1,4 +1,3 @@
-import React from "react";
 import BreadCumb from "../../Components/BreadCumb";
 
 const Invoice = () => {
